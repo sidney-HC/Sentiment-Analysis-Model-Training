@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Sentiment-Analysis-Model-Training/</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>index</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7981,7 +7981,6 @@ memory usage: 80.1+ MB
 <h1 id="Data-Preprocessing">Data Preprocessing<a class="anchor-link" href="#Data-Preprocessing">¶</a></h1><p>Preprocessing the data involved several critical steps to clean and prepare the text for analysis:</p>
 <p>Handling Missing Values: Any missing values in the text data were filled with an empty string to avoid errors during processing.
 Text Normalization: Text was converted to lowercase, contractions were expanded, and URLs, mentions, hashtags, non-word characters, sequences of underscores or dashes, and multiple spaces were removed using regular expressions.
-Named Entity Recognition (NER): Named entities (e.g., names of people) were removed using spaCy's NER capabilities to focus on the general sentiment rather than specific individuals.
 Tokenization and Lemmatization: Text was tokenized into words, stop words were removed, and words were lemmatized to their base forms to standardize the text and reduce dimensionality.
 Parallel processing was employed to expedite the preprocessing steps, utilizing multiple CPU cores to handle the large volume of text data efficiently.</p>
 </div>
@@ -8375,7 +8374,6 @@ weighted avg       0.85      0.85      0.85   1050000
 <h2 id="Limitations">Limitations<a class="anchor-link" href="#Limitations">¶</a></h2><ul>
 <li><strong>Computation Time</strong>: The training and optimization of the model were time-consuming due to the large size of the dataset and the complexity of the <code>BayesSearchCV</code> optimization.</li>
 <li><strong>Resource Intensive</strong>: High memory usage was required for handling and processing the dataset, especially during the <code>TfidfVectorizer</code> and model training stages.</li>
-<li><strong>SpaCy NER</strong>: Using SpaCy for named entity recognition added significant overhead to the preprocessing pipeline, slowing down the process.</li>
 <li><strong>Imbalanced Classes</strong>: Some datasets (like the Amazon reviews) had imbalanced class distributions, which could affect the performance and bias of the model.</li>
 </ul>
 <h2 id="Conclusion">Conclusion<a class="anchor-link" href="#Conclusion">¶</a></h2><p>In this project, we successfully implemented a sentiment analysis model using a combination of three large datasets. The model achieved an accuracy of 84% on the test set, demonstrating the effectiveness of combining multiple datasets and using advanced optimization techniques like Bayesian Optimization for hyperparameter tuning. While the results are promising, there is room for improvement, particularly in optimizing the preprocessing pipeline and exploring more sophisticated models.</p>
