@@ -1,6 +1,7 @@
 # Sentiment-Analysis-Model-Training
 Sentiment Analysis Model Training
 
+View note book here: https://sidney-hc.github.io/Sentiment-Analysis-Model-Training/
 ## Introduction
 
 This project aims to perform sentiment analysis on a combination of three datasets: the Sentiment 140 dataset, IMDB movie review dataset, and a subset of the Amazon review dataset. The goal is to accurately classify text data into positive and negative sentiments using advanced machine learning techniques and hyperparameter optimization.
